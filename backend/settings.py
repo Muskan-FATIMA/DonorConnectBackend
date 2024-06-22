@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-^_c*0@70u01pd!udcx*mqj%)_z0pv-eky!=0h+zg7p%z6(i=rm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["donorconnect.pythonanywhere.com"]
 
 
 # Application definition
@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'contact',
     'newsletter',
     'rest_framework',
-    'rest_framework_simplejwt',    
+    'rest_framework_simplejwt',
     'corsheaders'
 ]
 
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'backend.urls'
 
