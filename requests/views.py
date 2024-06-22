@@ -43,9 +43,9 @@ class RequestViewSet(viewsets.ModelViewSet):
                     <span>Location: <strong>{request.bldDonationLocation}</strong></span><br>
                 </div>
                 <p>If you are able to assist, please click on this button to view the request details and accept it 👇🏻</p>
-                <button><a href='http://localhost:5173/view-request'  style="color: #fffaf5; text-decoration: none; font-weight: bold;">View and Accept Request</a></button>
+                <button><a href='https://donorconnect.netlify.app/view-request' style="color: #fffaf5; text-decoration: none; font-weight: bold;">View and Accept Request</a></button>
                 <p><strong>Your timely response can save a life!!</strong></p>
-                <p>If you are unable to help, we kindly ask that you share this request with your contacts who might be in a position to assist. Please spread the word about <a href='http://localhost:5173'>Our Website</a>.
+                <p>If you are unable to help, we kindly ask that you share our website <a href='https://donorconnect.netlify.app/'>Donor Connect</a> with your contacts who might be in a position to assist.
                 </p>
                 <p>Thank you for your compassion and support in making a difference in someone's life.</p>
                 <p>Warm regards,<br>Team DonorConnect</p>
@@ -60,7 +60,7 @@ class RequestViewSet(viewsets.ModelViewSet):
                     from_email,
                     recipient_list
                 )
-        email.content_subtype = 'html'  # Important for sending HTML email
+        email.content_subtype = 'html' 
         try:
             email.send(fail_silently=False)
         except Exception as e:
@@ -137,7 +137,7 @@ class RequestViewSet(viewsets.ModelViewSet):
                     <p>Warm regards,<br>Team DonorConnect</p>
                     <br>
                     <p>Once the blood donation process will get successful, we request you to please give your valuable feedback here 👇🏻</p>
-                    <button><a href="http://localhost:5173/feedback" style="color: #fffaf5; text-decoration: none; font-weight: bold;">Give Your Feedback</a></button>
+                    <button><a href="https://donorconnect.netlify.app/feedback" style="color: #fffaf5; text-decoration: none; font-weight: bold;">Give Your Feedback</a></button>
                 </body>
             </html>
             '''
